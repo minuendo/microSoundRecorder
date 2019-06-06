@@ -60,7 +60,7 @@
   #define ADC_PIN2 A3 // can be changed //<<<======>>>
   #define DIFF 0
 #elif (ACQ == _I2S_32) || (ACQ == _I2S_32_MONO) || (ACQ == _I2S_TDM) 
-  #define NSHIFT 12 // number of bits to shift data to the right before extracting 16 bits //<<<======>>>
+  #define NSHIFT 16 // number of bits to shift data to the right before extracting 16 bits //<<<======>>>
 #endif
 
 #define MDEL -1     // maximal delay in buffer counts (128/fs each; for fs= 48 kHz: 128/48 = 2.5 ms each) //<<<======>>>
@@ -92,7 +92,7 @@ typedef struct
 //  acquire whole day (from midnight to noon and noot to midnight)
 //
 
-ACQ_Parameters_s acqParameters = { 30, 10, 60, 0, 12, 12, 24, 0, "TDM"}; //<<<======>>>
+ACQ_Parameters_s acqParameters = { 36000, 600, 36000, 0, 12, 12, 24, 0, "AF-00X"}; //<<<======>>>
 
 // the following global variable may be set from anywhere
 // if one wanted to close file immediately
@@ -139,4 +139,3 @@ SNIP_Parameters_s snipParameters = { 0, -1, 1000, 10000, 3750, 375, 0, MDEL}; //
 
 //
 /*********************** End possible User Modifications ********************************/
-

@@ -55,7 +55,7 @@ private:
 
 // initialize static varaiables
 DMAMEM static uint32_t tdm_rx_buffer[2*AUDIO_BLOCK_SAMPLES*MBL];
-audio_block_t * I2S_TDM::block_incoming[NBL] = { NULL, NULL, NULL, NULL, NULL };
+audio_block_t * I2S_TDM::block_incoming[NBL] = { NULL, NULL, NULL, NULL}; //, NULL };
 bool I2S_TDM::update_responsibility = false;
 DMAChannel I2S_TDM::dma(false);
 int16_t I2S_TDM::shift=8; //8 shifts 24 bit data to LSB
